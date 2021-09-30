@@ -58,7 +58,6 @@ function startTimer(){
   function timer(){
       timeCount.textContent = time; //changing the value of timeCount with time value
       time--; //decrement the time value
-      timeScore = parseInt(time);
       if(time < 9){ //if timer is less than 9
           let addZero = timeCount.textContent; 
           timeCount.textContent = "0" + addZero; //add a 0 before time value
@@ -67,7 +66,7 @@ function startTimer(){
         clearInterval(counter); //clear counter
         timeText.textContent = "GAME OVER"; //change the time text to GAME OVER
         timeCount.textContent = "";
-        localStorage.setItem("mostRecentScore", timeScore);
+        localStorage.setItem("mostRecentScore", 0);
         localStorage.setItem("mostGameOver", timeTexter);
         return window.location.assign("end.html");
     }
@@ -76,6 +75,7 @@ function startTimer(){
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    timeScore = parseInt(time);
     localStorage.setItem("mostRecentScore", timeScore);
     localStorage.setItem("mostGameOver", timeTexter);
     //go to the end page
