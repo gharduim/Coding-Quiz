@@ -44,4 +44,4 @@ THEN I can save my initials and my score
 
 3. My repository is https://github.com/gharduim/Coding-Quiz
 
-4. My live webpage is  https://gharduim.github.io/Password-generator/
+4. My live webpage is  https://gharduim.github.io/Coding-Quiz/
